@@ -28,9 +28,13 @@ green is ~2.8:1). Crimson Light tightens this: every base ANSI color is
 ≥ 4.5:1; only its `bright_*` siblings and `dark_foreground` sit in the
 3.8–4.4:1 chrome band, comparable to the official themes' weakest entries.
 
-## 2. Measured contrast (WCAG formula, same calculator as `omarchy-theme-preview`)
+## 2. Measured contrast (WCAG 2.x relative-luminance formula)
 
-Against `background #F9F2F4` (L = 0.905):
+Against `background #F9F2F4` (L = 0.905). The official
+`omarchy-dev-theme-preview` prints **foreground/background = 15.02:1**
+for the resolved pair (it computes the pair slightly more generously
+than the plain WCAG table below); both calcs agree the pair clears the
+7:1 target by a wide margin:
 
 | Role | Key | Hex | Ratio |
 |---|---|---|---|

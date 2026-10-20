@@ -18,7 +18,7 @@ Omarchy's built-in templates.
 | Key | Value | Role |
 |---|---|---|
 | `mode` | `light` | paper surfaces, dark text |
-| `background` | `#F9F2F4` | warm rose paper (text 14.1:1) |
+| `background` | `#F9F2F4` | warm rose paper (text 15.02:1) |
 | `foreground` | `#32161C` | deep wine ink |
 | `accent` / `red` | `#B62A3E` | one accent, crimson, 5.3:1 on paper |
 | `selection` | `#EFDADE` | rose selection |
