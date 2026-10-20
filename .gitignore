@@ -1,0 +1,6 @@
+# Editor / OS noise — the theme itself needs no build artifacts.
+*~
+*.bak
+*.swp
+.DS_Store
+Thumbs.db
