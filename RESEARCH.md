@@ -78,9 +78,10 @@ README/RESEARCH/LICENSE are staged as docs, as with the dark sibling.
 not change the active background.
 
 `preview.png` is a real desktop screenshot (1800×1012) taken while this
-theme was live: clean first workspace over
-`001-crimson-light-marble.jpg`, then the `omarchy dev theme-preview
-crimson-light --no-osc` console in a themed terminal.
+theme was live: clean first workspace, then the `omarchy dev theme-preview
+crimson-light --no-osc` console in a themed terminal. It predates the
+current abstract wallpaper set; the new rose-paper washes are shown in
+the README.
 
 Behavior note (verified while re-shooting the preview): when switching
 themes, if the *current* background file does not belong to the new
@@ -103,8 +104,8 @@ Pin a deterministic background with
 
 ## 6. Assets
 
-- The three wallpapers form a curated set (marble, clouds, anime),
-  2560×1440, 385–470 KB.
+- The three wallpapers form a curated abstract set (blush, petal, linen),
+  2560×1440 PNG, 150–205 KB, generated procedurally with ImageMagick.
 - `unlock.png` reuses the dark sibling's crimson key art (1108×523,
   transparent) — it is legible on the light lock/boot surface too, which
   keeps the family identity identical.

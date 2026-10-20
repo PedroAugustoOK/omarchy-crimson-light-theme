@@ -31,17 +31,20 @@ official light themes' weakest entries).
 
 ## Wallpapers
 
-Three 2560×1440 curated wallpapers in `backgrounds/` (cycle with
-`Super + Ctrl + Space`): white-crimson marble, a crimson sky with white
-clouds, and a crimson anime portrait.
+Three 2560×1440 abstract wallpapers in `backgrounds/` (cycle with
+`Super + Ctrl + Space`). The light counterpart to the dark set: soft rose
+on warm paper, no imagery, in the same quiet, blurred language as
+[Veredas](https://github.com/PedroAugustoOK/omarchy-veredas-theme).
 
 | Wallpaper | Description |
 |---|---|
-| ![01 Crimson Light Marble](backgrounds/001-crimson-light-marble.jpg) `001-crimson-light-marble.jpg` | White marble agate veined with crimson |
-| ![02 Crimson Light Clouds](backgrounds/002-crimson-light-clouds.jpg) `002-crimson-light-clouds.jpg` | Crimson storm sky over towering white clouds |
-| ![03 Crimson Light Anime](backgrounds/003-crimson-light-anime.jpg) `003-crimson-light-anime.jpg` | Crimson anime portrait, white hair and petals |
+| ![01 Crimson Light Blush](backgrounds/001-crimson-light-blush.png) `001-crimson-light-blush.png` | Morning light on warm paper, with rose in the corners |
+| ![02 Crimson Light Petal](backgrounds/002-crimson-light-petal.png) `002-crimson-light-petal.png` | A pale rose halo, barely there |
+| ![03 Crimson Light Linen](backgrounds/003-crimson-light-linen.png) `003-crimson-light-linen.png` | A diagonal rose wash on linen cream |
 
-All under 500 KB. Nothing animated.
+PNG, 150–205 KB each. Original abstract artwork generated
+programmatically with ImageMagick; no third-party imagery. Nothing
+animated.
 
 ## Installation
 
@@ -102,7 +105,7 @@ To go back to the dark sibling: `omarchy theme set crimson`.
 ```text
 omarchy-crimson-light-theme/
 ├── colors.toml          # the palette — the only required file
-├── backgrounds/         # 3 curated 2560×1440 wallpapers
+├── backgrounds/         # 3 abstract 2560×1440 wallpapers
 ├── icons.theme          # Yaru-red
 ├── keyboard.rgb         # e63950
 ├── preview.png          # 1800×1012 theme-picker thumbnail (real screenshot)
