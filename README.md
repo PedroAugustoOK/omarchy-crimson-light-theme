@@ -31,16 +31,17 @@ official light themes' weakest entries).
 
 ## Wallpapers
 
-Three 2560×1440 originals in `backgrounds/` (cycle with `Super + Ctrl +
-Space`), the light twins of the dark theme's motifs:
+Three 2560×1440 curated wallpapers in `backgrounds/` (cycle with
+`Super + Ctrl + Space`): white-crimson marble, a crimson sky with white
+clouds, and a crimson anime portrait.
 
 | Wallpaper | Description |
 |---|---|
-| ![01 Crimson Light Minimal](backgrounds/001-crimson-light-minimal.png) `001-crimson-light-minimal.png` | Flat paper, crimson horizon line, ring-and-dot mark |
-| ![02 Crimson Light Dawn](backgrounds/002-crimson-light-dawn.jpg) `002-crimson-light-dawn.jpg` | Pale dawn gradient, hazy crimson sun, layered ridges |
-| ![03 Crimson Light Abstract](backgrounds/003-crimson-light-abstract.jpg) `003-crimson-light-abstract.jpg` | Pale bands with wine and crimson bezier sweeps |
+| ![01 Crimson Light Marble](backgrounds/001-crimson-light-marble.jpg) `001-crimson-light-marble.jpg` | White marble agate veined with crimson |
+| ![02 Crimson Light Clouds](backgrounds/002-crimson-light-clouds.jpg) `002-crimson-light-clouds.jpg` | Crimson storm sky over towering white clouds |
+| ![03 Crimson Light Anime](backgrounds/003-crimson-light-anime.jpg) `003-crimson-light-anime.jpg` | Crimson anime portrait, white hair and petals |
 
-All under ~100 KB. Nothing animated.
+All under 500 KB. Nothing animated.
 
 ## Installation
 
@@ -101,7 +102,7 @@ To go back to the dark sibling: `omarchy theme set crimson`.
 ```text
 omarchy-crimson-light-theme/
 ├── colors.toml          # the palette — the only required file
-├── backgrounds/         # 3 original light wallpapers
+├── backgrounds/         # 3 curated 2560×1440 wallpapers
 ├── icons.theme          # Yaru-red
 ├── keyboard.rgb         # e63950
 ├── preview.png          # 1800×1012 theme-picker thumbnail (real screenshot)

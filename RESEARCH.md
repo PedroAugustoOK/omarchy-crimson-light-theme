@@ -95,9 +95,8 @@ crimson-light --no-osc` console in a themed terminal.
 
 ## 6. Assets
 
-- The three wallpapers are the light twins of the dark trio's motifs
-  (paper flat + ring-and-dot; dawn gradient + hazy sun + ridges; pale
-  bands + wine beziers), 2560×1440, 38–100 KB, authored for this theme.
+- The three wallpapers form a curated set (marble, clouds, anime),
+  2560×1440, 385–470 KB.
 - `unlock.png` reuses the dark sibling's crimson key art (1108×523,
   transparent) — it is legible on the light lock/boot surface too, which
   keeps the family identity identical.
