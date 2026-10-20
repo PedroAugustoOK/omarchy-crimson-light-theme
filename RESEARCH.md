@@ -79,8 +79,16 @@ not change the active background.
 
 `preview.png` is a real desktop screenshot (1800×1012) taken while this
 theme was live: clean first workspace over
-`001-crimson-light-minimal.png`, then the `omarchy dev theme-preview
+`001-crimson-light-marble.jpg`, then the `omarchy dev theme-preview
 crimson-light --no-osc` console in a themed terminal.
+
+Behavior note (verified while re-shooting the preview): when switching
+themes, if the *current* background file does not belong to the new
+theme's `backgrounds/`, `omarchy-theme-set` picks one of the new theme's
+**randomly** (`omarchy theme bg current` may print a stale name while
+`~/.local/state/omarchy/current/background` already points elsewhere).
+Pin a deterministic background with
+`omarchy theme bg set <absolute path>` after switching.
 
 ## 5. Plymouth / OWE specifics
 
