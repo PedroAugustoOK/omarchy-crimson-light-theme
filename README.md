@@ -84,6 +84,17 @@ configs are regenerated with the current templates.
 
 To go back to the dark sibling: `omarchy theme set lula`.
 
+## Lock / boot art
+
+`unlock.png` and `preview-unlock.png` are generated from `colors.toml` by
+`scripts/make-unlock.sh`. The mark is the exact geometric twin of the dark
+sibling's: a disc sliced flat on the right, a square carrying a circular
+bite on its left and a chevron bite on its right, and a rhombus sliced
+flat on the left — three forms that interlock with gaps rather than
+overlapping. Only the palette differs: the forms are the light accent
+`#B62A3E` on paper, and the dark sibling's red glow becomes a rose bloom
+of the same opacity profile.
+
 ## Optional extras (machine-local)
 
 - **Plymouth boot screen**:
@@ -113,8 +124,7 @@ omarchy-lula-light-theme/
 ├── preview.png          # 1800×1012 theme-picker artwork
 ├── unlock.png           # transparent lock/boot art (own light-theme mark)
 ├── preview-unlock.png   # 1920×1080 lock/boot styles preview
-├── scripts/             # make-preview.sh, make-unlock.sh
-├── README.md
+├── scripts/             # make-preview.sh, make-unlock.sh├── README.md
 ├── RESEARCH.md          # light-mode conventions + measured contrast
 └── LICENSE              # MIT
 ```
