@@ -1,8 +1,9 @@
 # RESEARCH — Lula Light
 
 Engineering notes for the **light** sibling of Lula.
-Verified on **Omarchy 4.0.5-1**. Dark-sibling mechanics (staging flow,
-deny list, template resolution, Plymouth, OWE) are documented in the
+Verified on **Omarchy 4.0.5-1** and re-audited on **4.0.6-1** (2026-10-21).
+Dark-sibling mechanics (staging flow, deny list, template resolution,
+Plymouth, OWE) are documented in the
 [Lula (dark) repo's RESEARCH.md](https://github.com/PedroAugustoOK/omarchy-lula-theme/blob/main/RESEARCH.md);
 this file only registers what is light-specific.
 
@@ -25,43 +26,48 @@ and `/usr/share/omarchy/themes/flexoki-light/colors.toml`.
 
 Official light themes do **not** hold ANSI to ≥ 4.5:1 (catppuccin-latte's
 green is ~2.8:1). Lula Light tightens this: every base ANSI color is
-≥ 4.5:1; only its `bright_*` siblings and `dark_foreground` sit in the
-3.8–4.4:1 chrome band, comparable to the official themes' weakest entries.
+≥ 5.07:1; only its `bright_*` siblings and `dark_foreground` drop into the
+4.13–4.4:1 chrome band, comparable to the official themes' weakest entries.
 
 ## 2. Measured contrast (WCAG 2.x relative-luminance formula)
 
 Against `background #F9F2F4` (L = 0.905). The official
-`omarchy-dev-theme-preview` prints **foreground/background = 15.02:1**
-for the resolved pair (it computes the pair slightly more generously
-than the plain WCAG table below); both calcs agree the pair clears the
-7:1 target by a wide margin:
+`omarchy dev theme-preview` prints **foreground/background = 15.02:1**;
+the table below uses the same formula and reproduces its numbers exactly.
 
 | Role | Key | Hex | Ratio |
 |---|---|---|---|
-| main text | `foreground`/`bright_foreground` | `#32161C` | **14.06:1** |
-| secondary text | `light_foreground` | `#4B2B31` | **10.10:1** |
-| chrome text | `dark_foreground` | `#8A6A71` | 3.97:1 |
-| accent / red | `accent`/`red` | `#B62A3E` | **5.29:1** |
-| `bright_red` | | `#C53344` | 4.57:1 |
-| `yellow` / `bright_yellow` | | `#86600B` / `#876108` | 4.69:1 / 4.63:1 |
-| `orange` | | `#A8491F` | 4.82:1 |
-| `green` / `bright_green` | | `#2A7033` / `#2E7336` | 4.99:1 / 4.78:1 |
-| `cyan` / `bright_cyan` | | `#0D6E75` / `#0F6E75` | 4.97:1 / 4.96:1 |
-| `blue` / `bright_blue` | | `#24578D` / `#2E68A5` | 6.08:1 / 4.77:1 |
-| `magenta` / (`purple`) | | `#A63E96` | 4.70:1 |
-| `bright_magenta` | | `#B44FA6` | 3.84:1 |
-| `brown` | | `#6B3D2A` | 7.32:1 |
+| main text | `foreground`/`bright_foreground` | `#32161C` | **15.02:1** |
+| secondary text | `light_foreground` | `#4B2B31` | **11.27:1** |
+| chrome text | `dark_foreground` | `#8A6A71` | 4.35:1 |
+| accent / red | `accent`/`red` | `#B62A3E` | **5.62:1** |
+| `bright_red` | | `#C53344` | 4.84:1 |
+| `yellow` / `bright_yellow` | | `#86600B` / `#876108` | 5.16:1 / 5.08:1 |
+| `orange` | | `#A8491F` | 5.23:1 |
+| `green` / `bright_green` | | `#2A7033` / `#2E7336` | 5.50:1 / 5.26:1 |
+| `cyan` / `bright_cyan` | | `#0D6E75` / `#0F6E75` | 5.43:1 / 5.43:1 |
+| `blue` / `bright_blue` | | `#24578D` / `#2E68A5` | 6.74:1 / 5.23:1 |
+| `magenta` / (`purple`) | | `#A63E96` | 5.07:1 |
+| `bright_magenta` | | `#B44FA6` | 4.13:1 |
+| `brown` | | `#6B3D2A` | 8.18:1 |
 
-Swap-check: `foreground #32161C` on `selection #EFDADE` keeps ~7.5:1;
-`background` on `dark_background` offers an 8.5:1 invert pair.
+Swap-check: `foreground #32161C` on `selection #EFDADE` keeps **12.43:1**;
+`background` against `dark_background` is a **1.11:1** pair — adjacent
+surfaces in a light theme are meant to be close, not to invert.
+
+Every base ANSI color clears **5.07:1** (the weakest is `magenta`). The
+`bright_*` siblings sit lower: `bright_magenta` is the floor at **4.13:1**,
+and `dark_foreground` (chrome) is at 4.35:1. Those two are the only entries
+below 4.5:1, and both are chrome-grade roles, in the same band as the
+official light themes' weakest entries.
 
 ## 3. Resolution check
 
 `omarchy-theme-color --file colors.toml --all` resolves **58 keys**
-(dark themes resolve 71 — the four original `*-mix`-style light/dark
-preview variants and a few dark-only derivatives are the difference;
-none are referenced by the built-in templates). Verified present and
-correct: `mode = light`, `theme_type = light`, `bg`/`fg` aliases,
+on Omarchy 4.0.6-1 — the same count the dark sibling resolves on this
+version (on 4.0.5-1 the dark theme resolved 71; the resolver's derived-key
+set narrowed with the release). Verified present and correct:
+`mode = light`, `theme_type = light`, `bg`/`fg` aliases,
 `color0–15`, `purple` → `#A63E96`, both
 `hyprland_*_border` gradient strings intact.
 
@@ -93,8 +99,8 @@ Pin a deterministic background with
 ## 5. Plymouth / OWE specifics
 
 - `omarchy-plymouth-set-by-theme lula-light` works exactly as for the
-  dark theme: it uses `unlock.png` plus this theme's
-  `background`/`foreground` (light boot: red mark on paper).
+  dark theme: it uses this theme's own `unlock.png` plus its
+  `background`/`foreground` (light boot: wine mark on paper).
   `omarchy plymouth preview` composites `preview-unlock.png` and always
   ends "hanging" in `imv` — that is the viewer, not the pipeline; the PNG
   is already written (run under `timeout`).
@@ -105,8 +111,15 @@ Pin a deterministic background with
 
 - The three wallpapers form a curated abstract set (blush, petal, linen),
   2560×1440 PNG, 150–205 KB, generated procedurally with ImageMagick.
-- `unlock.png` reuses the dark sibling's red key art (1108×523,
-  transparent) — it is legible on the light lock/boot surface too, which
-  keeps the family identity identical.
-- Icons `Yaru-red`, keyboard backlight `e63950` (the keyboard RGB has no
-  light/dark distinction in Omarchy's pipeline).
+- `unlock.png` (1108×523, transparent) and `preview-unlock.png`
+  (1920×1080) are **this theme's own** key art, generated by
+  `scripts/make-unlock.sh`. It keeps the family monogram — circle, square
+  and diamond with the two interlock zones painted a step deeper — but in
+  the light palette: the accent `#B62A3E` on paper, with a soft warm
+  shadow instead of the dark sibling's red glow. Reusing the dark theme's
+  art byte-for-byte would put a `#FF5C74` glow on a white boot screen and
+  would not be derived from this theme's colors at all.
+- Icons `Yaru-red`, keyboard backlight `b62a3e` — the theme's own accent,
+  which is also what the built-in `keyboard.rgb.tpl` (`{{ accent }}`)
+  generates. The dark sibling keeps `e63950` because that *is* its accent.
+  Omarchy's keyboard pipeline has no light/dark distinction.

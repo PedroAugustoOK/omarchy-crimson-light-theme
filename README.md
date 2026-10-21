@@ -20,14 +20,15 @@ Omarchy's built-in templates.
 | `mode` | `light` | paper surfaces, dark text |
 | `background` | `#F9F2F4` | warm rose paper (text 15.02:1) |
 | `foreground` | `#32161C` | deep wine ink |
-| `accent` / `red` | `#B62A3E` | one accent, wine red, 5.3:1 on paper |
+| `accent` / `red` | `#B62A3E` | one accent, wine red, 5.62:1 on paper |
 | `selection` | `#EFDADE` | rose selection |
-| `muted` | `#B79AA1` | soft borders (3.97:1, chrome only) |
+| `muted` | `#B79AA1` | soft borders (2.34:1, chrome only) |
 
-Panel/ANSI contrast (same calculator as `omarchy-theme-preview`):
-every ANSI color ≥ 4.57:1 on the background; `bright_*` are slightly
-lightened siblings (3.84:1 for `bright_magenta`, chrome-grade like the
-official light themes' weakest entries).
+Panel/ANSI contrast (same calculator as `omarchy dev theme-preview`):
+every base ANSI color is ≥ 5.07:1 on the background; the `bright_*`
+siblings sit lower — `bright_magenta` is the floor at 4.13:1, and
+`dark_foreground` (chrome) is at 4.35:1, chrome-grade like the official
+light themes' weakest entries.
 
 ## Wallpapers
 
@@ -93,10 +94,11 @@ To go back to the dark sibling: `omarchy theme set lula`.
 
 ## Compatibility
 
-- Omarchy **4.x**, tested on `4.0.5-1`.
+- Omarchy **4.x**, tested on `4.0.5-1` and `4.0.6-1`.
 - Ships no `.lua`, no terminal configs, no `vscode.json`, no symlinks —
   nothing is dropped by git-theme staging.
-- Icons `Yaru-red`; keyboard backlight red `e63950`.
+- Icons `Yaru-red`; keyboard backlight wine red `b62a3e` (the theme's own
+  accent, matching the built-in `keyboard.rgb.tpl`).
 - No animated `backgrounds/intros/` (the OWE wallpaper engine is optional
   and the theme stays static).
 
@@ -107,11 +109,11 @@ omarchy-lula-light-theme/
 ├── colors.toml          # the palette — the only required file
 ├── backgrounds/         # 3 abstract 2560×1440 wallpapers
 ├── icons.theme          # Yaru-red
-├── keyboard.rgb         # e63950
+├── keyboard.rgb         # b62a3e
 ├── preview.png          # 1800×1012 theme-picker artwork
-├── unlock.png           # transparent lock/boot art
+├── unlock.png           # transparent lock/boot art (own light-theme mark)
 ├── preview-unlock.png   # 1920×1080 lock/boot styles preview
-├── scripts/             # make-preview.sh, generates preview.png
+├── scripts/             # make-preview.sh, make-unlock.sh
 ├── README.md
 ├── RESEARCH.md          # light-mode conventions + measured contrast
 └── LICENSE              # MIT
