@@ -77,13 +77,12 @@ README/RESEARCH/LICENSE are staged as docs, as with the dark sibling.
 `omarchy theme refresh` is idempotent (byte-identical staging) and does
 not change the active background.
 
-`preview.png` is a real desktop screenshot (1800×1012) taken while this
-theme was live: clean first workspace, then the `omarchy dev theme-preview
-crimson-light --no-osc` console in a themed terminal. It predates the
-current abstract wallpaper set; the new rose-paper washes are shown in
-the README.
+`preview.png` is original artwork (1800×1012), generated from
+`colors.toml` by `scripts/make-preview.sh`: a soft rose wash, the theme
+wordmark, an accent rule and the six ANSI swatches. It is not a desktop
+screenshot and no longer depends on the wallpaper set.
 
-Behavior note (verified while re-shooting the preview): when switching
+Behavior note (verified while testing theme switches): when switching
 themes, if the *current* background file does not belong to the new
 theme's `backgrounds/`, `omarchy-theme-set` picks one of the new theme's
 **randomly** (`omarchy theme bg current` may print a stale name while

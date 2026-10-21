@@ -108,9 +108,10 @@ omarchy-crimson-light-theme/
 ├── backgrounds/         # 3 abstract 2560×1440 wallpapers
 ├── icons.theme          # Yaru-red
 ├── keyboard.rgb         # e63950
-├── preview.png          # 1800×1012 theme-picker thumbnail (real screenshot)
+├── preview.png          # 1800×1012 theme-picker artwork
 ├── unlock.png           # transparent lock/boot art
 ├── preview-unlock.png   # 1920×1080 lock/boot styles preview
+├── scripts/             # make-preview.sh, generates preview.png
 ├── README.md
 ├── RESEARCH.md          # light-mode conventions + measured contrast
 └── LICENSE              # MIT
