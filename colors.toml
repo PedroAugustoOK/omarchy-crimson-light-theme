@@ -1,5 +1,5 @@
-# Crimson Light — the bright sibling of the Crimson Omarchy theme.
-# Warm paper surfaces tinted rose, deep wine text, darkened crimson accent.
+# Lula Light — the bright sibling of the Lula Omarchy theme.
+# Warm paper surfaces tinted rose, deep wine text, darkened red accent.
 # All 26 canonical keys are explicit; ANSI stays readable on paper (>=4.5:1).
 
 mode = "light"
@@ -34,6 +34,6 @@ bright_cyan = "#0F6E75"
 bright_blue = "#2E68A5"
 bright_magenta = "#B44FA6"
 
-# Crimson gradient window borders, soft rose-gray inactive borders.
+# Red gradient window borders, soft rose-gray inactive borders.
 hyprland_active_border = "rgba(B62A3Eee) rgba(6B2130ee) 45deg"
 hyprland_inactive_border = "rgba(B79AA1aa)"

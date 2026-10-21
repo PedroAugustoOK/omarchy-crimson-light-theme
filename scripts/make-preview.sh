@@ -1,7 +1,7 @@
 #!/bin/bash
 # Generate an original minimalist 1800x1012 Omarchy theme preview.
 # Usage: ./scripts/make-preview.sh <theme-dir> "<theme name>" <output>
-# Example: ./scripts/make-preview.sh . "Crimson" preview.png
+# Example: ./scripts/make-preview.sh . "Lula Light" preview.png
 set -euo pipefail
 
 theme_dir=$1

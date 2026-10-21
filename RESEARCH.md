@@ -1,9 +1,9 @@
-# RESEARCH — Crimson Light
+# RESEARCH — Lula Light
 
-Engineering notes for the **light** sibling of Crimson.
+Engineering notes for the **light** sibling of Lula.
 Verified on **Omarchy 4.0.5-1**. Dark-sibling mechanics (staging flow,
 deny list, template resolution, Plymouth, OWE) are documented in the
-[Crimson (dark) repo's RESEARCH.md](https://github.com/PedroAugustoOK/omarchy-crimson-theme/blob/main/RESEARCH.md);
+[Lula (dark) repo's RESEARCH.md](https://github.com/PedroAugustoOK/omarchy-lula-theme/blob/main/RESEARCH.md);
 this file only registers what is light-specific.
 
 ## 1. Light-mode conventions (read from the official themes)
@@ -11,7 +11,7 @@ this file only registers what is light-specific.
 Studied on-disk: `/usr/share/omarchy/themes/catppuccin-latte/colors.toml`
 and `/usr/share/omarchy/themes/flexoki-light/colors.toml`.
 
-| Convention | Official behavior | Crimson Light follows it |
+| Convention | Official behavior | Lula Light follows it |
 |---|---|---|
 | `mode` | `"light"` | `"light"` (resolves `theme_type = light`; no `light.mode` side files exist) |
 | `foreground` | **dark** ink on paper | `#32161C` |
@@ -24,7 +24,7 @@ and `/usr/share/omarchy/themes/flexoki-light/colors.toml`.
 | `accent` | one saturated accent, pulled **darker** than its dark-theme twin because it sits on paper | `#B62A3E` (dark twin uses `#E63950`) |
 
 Official light themes do **not** hold ANSI to ≥ 4.5:1 (catppuccin-latte's
-green is ~2.8:1). Crimson Light tightens this: every base ANSI color is
+green is ~2.8:1). Lula Light tightens this: every base ANSI color is
 ≥ 4.5:1; only its `bright_*` siblings and `dark_foreground` sit in the
 3.8–4.4:1 chrome band, comparable to the official themes' weakest entries.
 
@@ -92,9 +92,9 @@ Pin a deterministic background with
 
 ## 5. Plymouth / OWE specifics
 
-- `omarchy-plymouth-set-by-theme crimson-light` works exactly as for the
+- `omarchy-plymouth-set-by-theme lula-light` works exactly as for the
   dark theme: it uses `unlock.png` plus this theme's
-  `background`/`foreground` (light boot: crimson mark on paper).
+  `background`/`foreground` (light boot: red mark on paper).
   `omarchy plymouth preview` composites `preview-unlock.png` and always
   ends "hanging" in `imv` — that is the viewer, not the pipeline; the PNG
   is already written (run under `timeout`).
@@ -105,7 +105,7 @@ Pin a deterministic background with
 
 - The three wallpapers form a curated abstract set (blush, petal, linen),
   2560×1440 PNG, 150–205 KB, generated procedurally with ImageMagick.
-- `unlock.png` reuses the dark sibling's crimson key art (1108×523,
+- `unlock.png` reuses the dark sibling's red key art (1108×523,
   transparent) — it is legible on the light lock/boot surface too, which
   keeps the family identity identical.
 - Icons `Yaru-red`, keyboard backlight `e63950` (the keyboard RGB has no
